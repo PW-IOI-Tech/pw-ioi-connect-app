@@ -5,7 +5,7 @@ interface ButtonProps extends Omit<PressableProps, "children"> {
   children: React.ReactNode;
   icon?: React.ReactNode;
   iconPlacement?: "left" | "right";
-  variant?: "primary" | "secondary" | "outline" | "ghost" | "danger" | "success" | "warning" | "info";
+  variant?: "primary" | "secondary" | "outline" | "ghost" | "danger" | "success" | "warning" | "info" | "link";
   size?: "sm" | "md" | "lg";
   className?: string;
   textClassName?: string;
@@ -36,6 +36,7 @@ export const Button: React.FC<ButtonProps> = ({
     success: "bg-green-500 active:opacity-80",
     warning: "bg-yellow-500 active:opacity-80",
     info: "bg-blue-500 active:opacity-80",
+    link: "bg-transparent active:bg-gray-50",
   };
 
   // Size styles
@@ -55,6 +56,7 @@ export const Button: React.FC<ButtonProps> = ({
     success: "text-white font-medium",
     warning: "text-white font-medium",
     info: "text-white font-medium",
+    link: "text-blue-600 font-medium",
   };
 
   // Text size styles
